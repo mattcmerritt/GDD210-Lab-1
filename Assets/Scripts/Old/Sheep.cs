@@ -11,7 +11,7 @@ public class Sheep : MonoBehaviour
         // if in front of the player, let the player know
         if (other.tag == "Player")
         {
-            other.GetComponent<Player>().FoundSheep(gameObject);
+            other.GetComponentInParent<Player>().FoundSheep(gameObject);
         }
         // if in the pen, remove the sheep (prevents others from bouncing out)
         else if (other.tag == "Goal")
@@ -26,7 +26,7 @@ public class Sheep : MonoBehaviour
         // if no longer in front of player, let the player know
         if (other.tag == "Player") 
         {
-            other.GetComponent<Player>().LostSheep();
+            other.GetComponentInParent<Player>().LostSheep();
         }
     }
 }
