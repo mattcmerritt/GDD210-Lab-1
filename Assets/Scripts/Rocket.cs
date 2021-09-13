@@ -16,7 +16,7 @@ public class Rocket : MonoBehaviour
     private void Update()
     {
         // destroy if it goes too far off screen
-        if (Mathf.Abs(transform.position.x) > 50 || Mathf.Abs(transform.position.z) > 50)
+        if (Mathf.Abs(transform.position.x) > 50 || Mathf.Abs(transform.position.z) > 50 || Mathf.Abs(transform.position.y) > 20)
         {
             Destroy(gameObject);
         }
